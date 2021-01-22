@@ -6,4 +6,6 @@
 export {default as Navbar} from './navbar'
 export {default as UserHome} from './user-home'
 export {default as Sandbox} from './sandbox'
+export {default as GooeyMenu} from './gooeyMenu'
+export {default as BlobStudy} from './blobStudy'
 export {Login, Signup} from './auth-form'
