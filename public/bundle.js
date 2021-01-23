@@ -695,8 +695,8 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       //essential variables
-      var canvas = document.getElementById("canvas"),
-          ctx = canvas.getContext("2d"),
+      var canvas = document.getElementById('canvas'),
+          ctx = canvas.getContext('2d'),
           aniId; //parameters
 
       var w = canvas.width = window.innerWidth - 230,
@@ -705,7 +705,7 @@ function (_React$Component) {
           //particle array
       level = 50,
           fill = false,
-          color = "tomato",
+          color = 'tomato',
           c; //Particle object constructor
 
       function particle(x, y, d) {
@@ -756,7 +756,7 @@ function (_React$Component) {
         } //debug
 
 
-        ctx.fillText("c:" + c + " lv:" + level, 10, 10);
+        ctx.fillText('c:' + c + ' lv:' + level, 10, 10);
         update();
         aniId = window.requestAnimationFrame(draw);
       } //function that updates variables
@@ -774,16 +774,16 @@ function (_React$Component) {
         }
       }
 
-      document.getElementById("level").oninput = function () {
-        level = document.getElementById("level").value;
+      document.getElementById('level').oninput = function () {
+        level = document.getElementById('level').value;
       };
 
-      document.getElementById("Filled_Hollow").onchange = function () {
-        fill = document.getElementById("Filled_Hollow").checked;
+      document.getElementById('Filled_Hollow').onchange = function () {
+        fill = document.getElementById('Filled_Hollow').checked;
       };
 
-      document.getElementById("blue_red").onchange = function () {
-        if (document.getElementById("blue_red").checked) color = "#34A7C1";else color = "tomato";
+      document.getElementById('blue_red').onchange = function () {
+        if (document.getElementById('blue_red').checked) color = '#34A7C1';else color = 'tomato';
       }; //update canvas size when resizing the window
 
 
@@ -824,7 +824,7 @@ function (_React$Component) {
         id: "Filled_Hollow"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "switch-label",
-        "for": "Filled_Hollow"
+        htmlFor: "Filled_Hollow"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "switch-inner"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -838,7 +838,7 @@ function (_React$Component) {
         id: "blue_red"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "switch-label",
-        "for": "blue_red"
+        htmlFor: "blue_red"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "switch-inner"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1139,10 +1139,10 @@ function (_React$Component) {
         arrows: true,
         slidesToSlide: this.state.numToScroll,
         additionalTransfrom: 0,
-        itemClass: 'react-carousel-item',
-        sliderClass: 'react-multi-carousel-track',
-        containerClass: 'react-multi-carousel-list',
-        dotListClass: 'react-multi-carousel-dot-list',
+        itemClass: "react-carousel-item",
+        sliderClass: "react-multi-carousel-track",
+        containerClass: "react-multi-carousel-list",
+        dotListClass: "react-multi-carousel-dot-list",
         keyBoardControl: true,
         autoPlay: false,
         minimumTouchDrag: 80,
@@ -1168,28 +1168,28 @@ function (_React$Component) {
             e.preventDefault();
           }
         }
-      }, " Item 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, ' ', "Item 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "helloThere",
         onClick: function onClick(e) {
           if (_this2.state.isMoving) {
             e.preventDefault();
           }
         }
-      }, " Item 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, ' ', "Item 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "helloThere",
         onClick: function onClick(e) {
           if (_this2.state.isMoving) {
             e.preventDefault();
           }
         }
-      }, " Item 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, ' ', "Item 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "helloThere",
         onClick: function onClick(e) {
           if (_this2.state.isMoving) {
             e.preventDefault();
           }
         }
-      }, " Item 4")));
+      }, ' ', "Item 4")));
     }
   }]);
 
@@ -15783,7 +15783,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "body {\n  margin: 0;\n}\n\ncanvas {\n  position: absolute;\n  top: 0;\n  left: 0;\n  background: white;\n}\n\n#container {\n  overflow: hidden;\n  position: relative;\n  float: right;\n  width: 230px;\n  height: calc(100vh);\n  background-color: white;\n  border-left: 3px solid #FFA493;\n  border-left: 3px solid #EEEEEE;\n}\n\n#rangeBox {\n  float: left;\n  position: relative;\n  width: 25px;\n  height: 100%;\n}\n\n#level {\n  position: relative;\n  margin: 0px 1px;\n  top: calc(50% - 13px);\n  left: calc(60px - 50vh);\n  width: calc(100vh - 100px);\n  height: 10px;\n  background-color: white;\n  -webkit-appearance: none;\n  transform: rotate(-90deg);\n}\n\n#statBox {\n  position: relative;\n  float: left;\n  width: calc(100% - 25px);\n  height: 100%;\n}\n\n.switch {\n  position: relative;\n  width: 86px;\n  margin: 10px auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n}\n\n.switch-checkbox {\n  display: none;\n}\n\n.switch-label {\n  display: block;\n  overflow: hidden;\n  cursor: pointer;\n  border: 1px solid #999999;\n  border-radius: 5px;\n}\n\n.switch-inner {\n  display: block;\n  width: 200%;\n  margin-left: -100%;\n  transition: margin 0.2s ease-in 0s;\n}\n\n.switch-inner:before, .switch-inner:after {\n  display: block;\n  float: left;\n  width: 50%;\n  height: 24px;\n  padding: 0;\n  line-height: 24px;\n  font-size: 14px;\n  color: white;\n  font-family: Trebuchet, Arial, sans-serif;\n  box-sizing: border-box;\n}\n\n.switch-inner:before {\n  content: \"Filled\";\n  padding-left: 20px;\n  background-color: #999999;\n  color: #FFFFFF;\n}\n\n.switch-inner:after {\n  content: \"Hollow\";\n  padding-right: 17px;\n  background-color: #EEEEEE;\n  color: #999999;\n  text-align: right;\n}\n\n.switch-switch {\n  display: block;\n  width: 15px;\n  margin: -3.5px;\n  background: #FFFFFF;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 73px;\n  border: 1px solid #999999;\n  border-radius: 3px;\n  transition: all 0.2s ease-in 0s;\n}\n\n.switch-checkbox:checked + .switch-label .switch-inner {\n  margin-left: 0;\n}\n\n.switch-checkbox:checked + .switch-label .switch-switch {\n  right: 0px;\n}\n\n#blue_red + label > .switch-inner:before {\n  content: \"Blue\";\n  padding-right: 20px;\n  background-color: #34A7C1;\n  color: #FFFFFF;\n}\n\n#blue_red + label > .switch-inner:after {\n  content: \"Red\";\n  padding-right: 24px;\n  background-color: tomato;\n  color: #FFFFFF;\n}", "",{"version":3,"sources":["webpack://./client/components/liquidBubblesSass.css"],"names":[],"mappings":"AAAA;EACE,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,YAAY;EACZ,YAAY;EACZ,mBAAmB;EACnB,uBAAuB;EACvB,8BAA8B;EAC9B,8BAA8B;AAChC;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,qBAAqB;EACrB,uBAAuB;EACvB,0BAA0B;EAC1B,YAAY;EACZ,uBAAuB;EACvB,wBAAwB;EACxB,yBAAyB;AAC3B;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,iBAAiB;EACjB,yBAAyB;EACzB,sBAAsB;EACtB,qBAAqB;AACvB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,cAAc;EACd,gBAAgB;EAChB,eAAe;EACf,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,kBAAkB;EAClB,kCAAkC;AACpC;;AAEA;EACE,cAAc;EACd,WAAW;EACX,UAAU;EACV,YAAY;EACZ,UAAU;EACV,iBAAiB;EACjB,eAAe;EACf,YAAY;EACZ,yCAAyC;EACzC,sBAAsB;AACxB;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;EAClB,yBAAyB;EACzB,cAAc;AAChB;;AAEA;EACE,iBAAiB;EACjB,mBAAmB;EACnB,yBAAyB;EACzB,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,cAAc;EACd,mBAAmB;EACnB,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,+BAA+B;AACjC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,eAAe;EACf,mBAAmB;EACnB,yBAAyB;EACzB,cAAc;AAChB;;AAEA;EACE,cAAc;EACd,mBAAmB;EACnB,wBAAwB;EACxB,cAAc;AAChB","sourcesContent":["body {\n  margin: 0;\n}\n\ncanvas {\n  position: absolute;\n  top: 0;\n  left: 0;\n  background: white;\n}\n\n#container {\n  overflow: hidden;\n  position: relative;\n  float: right;\n  width: 230px;\n  height: calc(100vh);\n  background-color: white;\n  border-left: 3px solid #FFA493;\n  border-left: 3px solid #EEEEEE;\n}\n\n#rangeBox {\n  float: left;\n  position: relative;\n  width: 25px;\n  height: 100%;\n}\n\n#level {\n  position: relative;\n  margin: 0px 1px;\n  top: calc(50% - 13px);\n  left: calc(60px - 50vh);\n  width: calc(100vh - 100px);\n  height: 10px;\n  background-color: white;\n  -webkit-appearance: none;\n  transform: rotate(-90deg);\n}\n\n#statBox {\n  position: relative;\n  float: left;\n  width: calc(100% - 25px);\n  height: 100%;\n}\n\n.switch {\n  position: relative;\n  width: 86px;\n  margin: 10px auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n}\n\n.switch-checkbox {\n  display: none;\n}\n\n.switch-label {\n  display: block;\n  overflow: hidden;\n  cursor: pointer;\n  border: 1px solid #999999;\n  border-radius: 5px;\n}\n\n.switch-inner {\n  display: block;\n  width: 200%;\n  margin-left: -100%;\n  transition: margin 0.2s ease-in 0s;\n}\n\n.switch-inner:before, .switch-inner:after {\n  display: block;\n  float: left;\n  width: 50%;\n  height: 24px;\n  padding: 0;\n  line-height: 24px;\n  font-size: 14px;\n  color: white;\n  font-family: Trebuchet, Arial, sans-serif;\n  box-sizing: border-box;\n}\n\n.switch-inner:before {\n  content: \"Filled\";\n  padding-left: 20px;\n  background-color: #999999;\n  color: #FFFFFF;\n}\n\n.switch-inner:after {\n  content: \"Hollow\";\n  padding-right: 17px;\n  background-color: #EEEEEE;\n  color: #999999;\n  text-align: right;\n}\n\n.switch-switch {\n  display: block;\n  width: 15px;\n  margin: -3.5px;\n  background: #FFFFFF;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 73px;\n  border: 1px solid #999999;\n  border-radius: 3px;\n  transition: all 0.2s ease-in 0s;\n}\n\n.switch-checkbox:checked + .switch-label .switch-inner {\n  margin-left: 0;\n}\n\n.switch-checkbox:checked + .switch-label .switch-switch {\n  right: 0px;\n}\n\n#blue_red + label > .switch-inner:before {\n  content: \"Blue\";\n  padding-right: 20px;\n  background-color: #34A7C1;\n  color: #FFFFFF;\n}\n\n#blue_red + label > .switch-inner:after {\n  content: \"Red\";\n  padding-right: 24px;\n  background-color: tomato;\n  color: #FFFFFF;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "body {\n  margin: 0;\n}\n\ncanvas {\n  position: absolute;\n  top: 0;\n  left: 0;\n  background: white;\n}\n\n#container {\n  overflow: hidden;\n  position: relative;\n  float: right;\n  width: 230px;\n  height: calc(100vh);\n  background-color: white;\n  border-left: 3px solid #ffa493;\n  border-left: 3px solid #eeeeee;\n}\n\n#rangeBox {\n  float: left;\n  position: relative;\n  width: 25px;\n  height: 100%;\n}\n\n#level {\n  position: relative;\n  margin: 0px 1px;\n  top: calc(50% - 13px);\n  left: calc(60px - 50vh);\n  width: calc(100vh - 100px);\n  height: 10px;\n  background-color: white;\n  -webkit-appearance: none;\n  transform: rotate(-90deg);\n}\n\n#statBox {\n  position: relative;\n  float: left;\n  width: calc(100% - 25px);\n  height: 100%;\n}\n\n.switch {\n  position: relative;\n  width: 86px;\n  margin: 10px auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n}\n\n.switch-checkbox {\n  display: none;\n}\n\n.switch-label {\n  display: block;\n  overflow: hidden;\n  cursor: pointer;\n  border: 1px solid #999999;\n  border-radius: 5px;\n}\n\n.switch-inner {\n  display: block;\n  width: 200%;\n  margin-left: -100%;\n  transition: margin 0.2s ease-in 0s;\n}\n\n.switch-inner:before,\n.switch-inner:after {\n  display: block;\n  float: left;\n  width: 50%;\n  height: 24px;\n  padding: 0;\n  line-height: 24px;\n  font-size: 14px;\n  color: white;\n  font-family: Trebuchet, Arial, sans-serif;\n  box-sizing: border-box;\n}\n\n.switch-inner:before {\n  content: \"Filled\";\n  padding-left: 20px;\n  background-color: #999999;\n  color: #ffffff;\n}\n\n.switch-inner:after {\n  content: \"Hollow\";\n  padding-right: 17px;\n  background-color: #eeeeee;\n  color: #999999;\n  text-align: right;\n}\n\n.switch-switch {\n  display: block;\n  width: 15px;\n  margin: -3.5px;\n  background: #ffffff;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 73px;\n  border: 1px solid #999999;\n  border-radius: 3px;\n  transition: all 0.2s ease-in 0s;\n}\n\n.switch-checkbox:checked + .switch-label .switch-inner {\n  margin-left: 0;\n}\n\n.switch-checkbox:checked + .switch-label .switch-switch {\n  right: 0px;\n}\n\n#blue_red + label > .switch-inner:before {\n  content: \"Blue\";\n  padding-right: 20px;\n  background-color: #34a7c1;\n  color: #ffffff;\n}\n\n#blue_red + label > .switch-inner:after {\n  content: \"Red\";\n  padding-right: 24px;\n  background-color: tomato;\n  color: #ffffff;\n}", "",{"version":3,"sources":["webpack://./client/components/liquidBubblesSass.css"],"names":[],"mappings":"AAAA;EACE,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,YAAY;EACZ,YAAY;EACZ,mBAAmB;EACnB,uBAAuB;EACvB,8BAA8B;EAC9B,8BAA8B;AAChC;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,qBAAqB;EACrB,uBAAuB;EACvB,0BAA0B;EAC1B,YAAY;EACZ,uBAAuB;EACvB,wBAAwB;EACxB,yBAAyB;AAC3B;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,iBAAiB;EACjB,yBAAyB;EACzB,sBAAsB;EACtB,qBAAqB;AACvB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,cAAc;EACd,gBAAgB;EAChB,eAAe;EACf,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,kBAAkB;EAClB,kCAAkC;AACpC;;AAEA;;EAEE,cAAc;EACd,WAAW;EACX,UAAU;EACV,YAAY;EACZ,UAAU;EACV,iBAAiB;EACjB,eAAe;EACf,YAAY;EACZ,yCAAyC;EACzC,sBAAsB;AACxB;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;EAClB,yBAAyB;EACzB,cAAc;AAChB;;AAEA;EACE,iBAAiB;EACjB,mBAAmB;EACnB,yBAAyB;EACzB,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,cAAc;EACd,mBAAmB;EACnB,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,+BAA+B;AACjC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,eAAe;EACf,mBAAmB;EACnB,yBAAyB;EACzB,cAAc;AAChB;;AAEA;EACE,cAAc;EACd,mBAAmB;EACnB,wBAAwB;EACxB,cAAc;AAChB","sourcesContent":["body {\n  margin: 0;\n}\n\ncanvas {\n  position: absolute;\n  top: 0;\n  left: 0;\n  background: white;\n}\n\n#container {\n  overflow: hidden;\n  position: relative;\n  float: right;\n  width: 230px;\n  height: calc(100vh);\n  background-color: white;\n  border-left: 3px solid #ffa493;\n  border-left: 3px solid #eeeeee;\n}\n\n#rangeBox {\n  float: left;\n  position: relative;\n  width: 25px;\n  height: 100%;\n}\n\n#level {\n  position: relative;\n  margin: 0px 1px;\n  top: calc(50% - 13px);\n  left: calc(60px - 50vh);\n  width: calc(100vh - 100px);\n  height: 10px;\n  background-color: white;\n  -webkit-appearance: none;\n  transform: rotate(-90deg);\n}\n\n#statBox {\n  position: relative;\n  float: left;\n  width: calc(100% - 25px);\n  height: 100%;\n}\n\n.switch {\n  position: relative;\n  width: 86px;\n  margin: 10px auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n}\n\n.switch-checkbox {\n  display: none;\n}\n\n.switch-label {\n  display: block;\n  overflow: hidden;\n  cursor: pointer;\n  border: 1px solid #999999;\n  border-radius: 5px;\n}\n\n.switch-inner {\n  display: block;\n  width: 200%;\n  margin-left: -100%;\n  transition: margin 0.2s ease-in 0s;\n}\n\n.switch-inner:before,\n.switch-inner:after {\n  display: block;\n  float: left;\n  width: 50%;\n  height: 24px;\n  padding: 0;\n  line-height: 24px;\n  font-size: 14px;\n  color: white;\n  font-family: Trebuchet, Arial, sans-serif;\n  box-sizing: border-box;\n}\n\n.switch-inner:before {\n  content: \"Filled\";\n  padding-left: 20px;\n  background-color: #999999;\n  color: #ffffff;\n}\n\n.switch-inner:after {\n  content: \"Hollow\";\n  padding-right: 17px;\n  background-color: #eeeeee;\n  color: #999999;\n  text-align: right;\n}\n\n.switch-switch {\n  display: block;\n  width: 15px;\n  margin: -3.5px;\n  background: #ffffff;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 73px;\n  border: 1px solid #999999;\n  border-radius: 3px;\n  transition: all 0.2s ease-in 0s;\n}\n\n.switch-checkbox:checked + .switch-label .switch-inner {\n  margin-left: 0;\n}\n\n.switch-checkbox:checked + .switch-label .switch-switch {\n  right: 0px;\n}\n\n#blue_red + label > .switch-inner:before {\n  content: \"Blue\";\n  padding-right: 20px;\n  background-color: #34a7c1;\n  color: #ffffff;\n}\n\n#blue_red + label > .switch-inner:after {\n  content: \"Red\";\n  padding-right: 24px;\n  background-color: tomato;\n  color: #ffffff;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
