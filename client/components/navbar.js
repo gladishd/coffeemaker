@@ -24,6 +24,8 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           <Link to="/sandbox">Sandbox</Link>
           <Link to="/gooeymenu">Gooey Menu</Link>
           <Link to="/blobstudy">Blob Study</Link>
+          <Link to="/liquidbubbles">Liquid Bubbles</Link>
+          <Link to="/reactmulticarousel">React Multi Carousel</Link>
         </div>
       )}
     </nav>

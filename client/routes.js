@@ -8,7 +8,9 @@ import {
   UserHome,
   Sandbox,
   GooeyMenu,
-  BlobStudy
+  BlobStudy,
+  LiquidBubbles,
+  ReactMultiCarousel
 } from './components'
 import {me} from './store'
 
@@ -31,6 +33,8 @@ class Routes extends Component {
         <Route path="/sandbox" component={Sandbox} />
         <Route path="/gooeymenu" component={GooeyMenu} />
         <Route path="/blobstudy" component={BlobStudy} />
+        <Route path="/liquidbubbles" component={LiquidBubbles} />
+        <Route path="/reactmulticarousel" component={ReactMultiCarousel} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
