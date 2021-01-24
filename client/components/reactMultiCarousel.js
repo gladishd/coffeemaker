@@ -38,7 +38,6 @@ class ReactMultiCarousel extends React.Component {
   render() {
     return (
       <div>
-        yo'ure done
         <Carousel
           responsive={responsive}
           arrows={true}
