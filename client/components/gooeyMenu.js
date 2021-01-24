@@ -8,9 +8,20 @@ import './gooeyMenuSass.scss'
 class GooeyMenu extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      selectedOption: ''
+    }
+    // this.clickHandler = this.clickHandler.bind(this)
   }
   componentDidMount() {}
+
+  // clickHandler(e) {
+  //   e.preventDefault();
+  //   this.setState({
+  //     selectedOption: e.target.id
+  //   })
+
+  // }
 
   render() {
     return (
@@ -34,25 +45,35 @@ class GooeyMenu extends React.Component {
               <span className="hamburger hamburger-3" />
             </label>
 
-            <a href="#" className="menu-item">
+            <a
+              href="#"
+              className="menu-item"
+              onClick={this.props.clickHandlerMenu}
+              id="coffee"
+            >
               {' '}
-              <i className="fa fa-bar-chart" />{' '}
+              <i className="fa " />
+              {'coffee'}
             </a>
-            <a href="#" className="menu-item">
+            <a
+              href="#"
+              className="menu-item"
+              onClick={this.props.clickHandlerMenu}
+              id="tea"
+            >
               {' '}
-              <i className="fa fa-plus" />{' '}
+              <i className="fa " />
+              {'tea'}
             </a>
-            <a href="#" className="menu-item">
+            <a
+              href="#"
+              className="menu-item"
+              onClick={this.props.clickHandlerMenu}
+              id="water"
+            >
               {' '}
-              <i className="fa fa-heart" />{' '}
-            </a>
-            <a href="#" className="menu-item">
-              {' '}
-              <i className="fa fa-envelope" />{' '}
-            </a>
-            <a href="#" className="menu-item">
-              {' '}
-              <i className="fa fa-cog" />{' '}
+              <i className="fa " />
+              {'water'}
             </a>
           </nav>
           {/* filters */}

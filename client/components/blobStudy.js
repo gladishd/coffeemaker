@@ -16,12 +16,28 @@ class BlobStudy extends React.Component {
     return (
       <div>
         <div className="loader">
-          <div className="loader-bg">
-            <span>LOADING</span>
+          <div
+            className="loader-bg"
+            style={{
+              background: `${this.props.newColor} repeat-x 0 100px/150px 300px`,
+              animation: 'wave 1s ease-out forwards'
+            }}
+          >
+            <span>{this.props.selectedType}</span>
           </div>
           <div className="drops">
-            <div className="drop1" />
-            <div className="drop2" />
+            <div
+              className="drop1"
+              style={{
+                backgroundColor: `${this.props.newColor}`
+              }}
+            />
+            <div
+              className="drop2"
+              style={{
+                backgroundColor: `${this.props.newColor}`
+              }}
+            />
           </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1">

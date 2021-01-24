@@ -35,6 +35,7 @@ class ReactMultiCarousel extends React.Component {
     }
   }
   componentDidMount() {}
+  componentDidUpdate() {}
 
   render() {
     return (
@@ -68,7 +69,10 @@ class ReactMultiCarousel extends React.Component {
             }}
           >
             {' '}
-            <BlobStudy />
+            <BlobStudy
+              selectedType={this.props.selectedType}
+              newColor={this.props.newColor}
+            />
           </div>
 
           <div
@@ -80,7 +84,10 @@ class ReactMultiCarousel extends React.Component {
             }}
           >
             {' '}
-            <BlobStudy />
+            <BlobStudy
+              selectedType={this.props.selectedType}
+              newColor={this.props.newColor}
+            />
           </div>
 
           <div
@@ -92,7 +99,10 @@ class ReactMultiCarousel extends React.Component {
             }}
           >
             {' '}
-            <BlobStudy />
+            <BlobStudy
+              selectedType={this.props.selectedType}
+              newColor={this.props.newColor}
+            />
           </div>
 
           <div

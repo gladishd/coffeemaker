@@ -8,9 +8,13 @@ import './liquidBubblesSass.css'
 class LiquidBubbles extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      level: 100
+    }
   }
   componentDidMount() {
+    console.log('did it at least remount in the beginning?')
+
     //essential variables
     var canvas = document.getElementById('canvas'),
       ctx = canvas.getContext('2d'),
@@ -85,7 +89,7 @@ class LiquidBubbles extends React.Component {
           ctx.stroke()
       }
       //debug
-      ctx.fillText('c:' + c + ' lv:' + level, 10, 10)
+      // ctx.fillText('c:' + c + ' lv:' + level, 10, 10)
 
       update()
       aniId = window.requestAnimationFrame(draw)
@@ -97,20 +101,30 @@ class LiquidBubbles extends React.Component {
       for (var i = 0; i < 40; i++) {
         particles[i].x = particles[i].x + Math.random() * 2 - 1
         particles[i].y = particles[i].y - 1
-        particles[i].d = particles[i].d - 0.004
+        particles[i].d = particles[i].d - 0.04
         if (particles[i].d <= 0) particles[i].respawn()
       }
     }
-    document.getElementById('level').oninput = function() {
-      level = document.getElementById('level').value
-    }
-    document.getElementById('Filled_Hollow').onchange = function() {
-      fill = document.getElementById('Filled_Hollow').checked
-    }
-    document.getElementById('blue_red').onchange = function() {
-      if (document.getElementById('blue_red').checked) color = '#34A7C1'
-      else color = 'tomato'
-    }
+    // document.getElementById('level').oninput = function () {
+    // level = document.getElementById('level').value
+    console.log('did it remount')
+    level = this.props.level
+    // level =
+
+    // console.log("the new level is", level)
+    // setTimeout(function () { level += 1 }, 1000)
+
+    // }
+    // document.getElementById('Filled_Hollow').onchange = function () {
+    // fill = document.getElementById('Filled_Hollow').checked
+    // }
+    fill = false
+
+    // document.getElementById('blue_red').onchange = function () {
+    // if (document.getElementById('blue_red').checked) color = '#34A7C1'
+    // else color = 'tomato'
+    // }
+    color = this.props.newColor
     //update canvas size when resizing the window
     window.addEventListener('resize', function() {
       //update the size
@@ -124,6 +138,20 @@ class LiquidBubbles extends React.Component {
     init()
   }
 
+  componentDidUpdate() {
+    // this.setState({ level: this.props.level })
+    // level = document.getElementById('level').value
+
+    // this.setState({
+    //   level: this.props.level
+    // })
+
+    // console.log("did it update", level)
+    // level = document.getElementById('level').value
+    console.log('did it update')
+    // level = this.props.level
+  }
+
   render() {
     return (
       <div>
@@ -131,11 +159,11 @@ class LiquidBubbles extends React.Component {
           <canvas id="canvas" />
         </div>
         <div id="container">
-          <input type="range" id="level" value="50" min="1" max="100" />
+          {/* <input type="range" id="level" value="50" min="1" max="100" /> */}
 
           <div id="statBox">
             <div className="switch">
-              <input
+              {/* <input
                 type="checkbox"
                 name="switch"
                 className="switch-checkbox"
@@ -144,7 +172,7 @@ class LiquidBubbles extends React.Component {
               <label className="switch-label" htmlFor="Filled_Hollow">
                 <span className="switch-inner" />
                 <span className="switch-switch" />
-              </label>
+              </label> */}
             </div>
             {/*  */}
             <div className="switch">
@@ -154,10 +182,11 @@ class LiquidBubbles extends React.Component {
                 className="switch-checkbox"
                 id="blue_red"
               />
-              <label className="switch-label" htmlFor="blue_red">
+              {/* change the color */}
+              {/* <label className="switch-label" htmlFor="blue_red">
                 <span className="switch-inner" />
                 <span className="switch-switch" />
-              </label>
+              </label> */}
             </div>
           </div>
           {/*  */}

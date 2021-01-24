@@ -12,9 +12,39 @@ import {default as DraggableBlob} from './draggableBlob'
 class Sandbox extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      selectedMenuOption: '',
+      level: -10
+    }
+    this.clickHandlerMenu = this.clickHandlerMenu.bind(this)
   }
   componentDidMount() {}
+
+  clickHandlerMenu(e) {
+    e.preventDefault()
+    this.setState({
+      selectedMenuOption: e.target.id
+    })
+    let level = this.state.level
+    level += 10
+
+    let newColor
+
+    console.log('the selected menu option is ', e.target.id)
+    if (e.target.id == 'water') {
+      newColor = 'blue'
+    } else if (e.target.id == 'tea') {
+      newColor = 'yellow'
+    } else if (e.target.id == 'coffee') {
+      newColor = 'brown'
+    }
+
+    this.setState({
+      level: level,
+      newColor: newColor
+    })
+    console.log('the new level is ', this.state.level)
+  }
 
   render() {
     return (
@@ -67,13 +97,20 @@ class Sandbox extends React.Component {
           </defs>
         </svg>
 
-        <GooeyMenu />
+        <GooeyMenu clickHandlerMenu={this.clickHandlerMenu} />
 
-        <ReactMultiCarousel />
+        <ReactMultiCarousel
+          selectedType={this.state.selectedMenuOption}
+          newColor={this.state.newColor}
+        />
 
-        <LiquidBubbles />
+        <LiquidBubbles
+          level={this.state.level}
+          key={this.state.level}
+          newColor={this.state.newColor}
+        />
 
-        <DraggableBlob />
+        {/* <DraggableBlob /> */}
       </div>
     )
   }
