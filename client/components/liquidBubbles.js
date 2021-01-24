@@ -71,9 +71,18 @@ class LiquidBubbles extends React.Component {
       //draw the bubbles
       for (var i = 0; i < 40; i++) {
         ctx.beginPath()
-        ctx.arc(particles[i].x, particles[i].y, particles[i].d, 0, 2 * Math.PI)
+        // change the size of the bubbles
+        ctx.arc(
+          particles[i].x,
+          particles[i].y,
+          particles[i].d * 3,
+          0,
+          2 * Math.PI
+        )
         if (fill) ctx.fill()
-        else ctx.stroke()
+        else
+          // ctx.fill()
+          ctx.stroke()
       }
       //debug
       ctx.fillText('c:' + c + ' lv:' + level, 10, 10)
@@ -88,7 +97,7 @@ class LiquidBubbles extends React.Component {
       for (var i = 0; i < 40; i++) {
         particles[i].x = particles[i].x + Math.random() * 2 - 1
         particles[i].y = particles[i].y - 1
-        particles[i].d = particles[i].d - 0.04
+        particles[i].d = particles[i].d - 0.004
         if (particles[i].d <= 0) particles[i].respawn()
       }
     }
@@ -122,9 +131,8 @@ class LiquidBubbles extends React.Component {
           <canvas id="canvas" />
         </div>
         <div id="container">
-          <div id="rangeBox">
-            <input type="range" id="level" value="50" min="1" max="100" />
-          </div>
+          <input type="range" id="level" value="50" min="1" max="100" />
+
           <div id="statBox">
             <div className="switch">
               <input

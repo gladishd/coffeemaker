@@ -4,6 +4,10 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import './mysass.scss'
+import {default as GooeyMenu} from './gooeyMenu'
+import {default as ReactMultiCarousel} from './reactMultiCarousel'
+import {default as LiquidBubbles} from './liquidBubbles'
+import {default as DraggableBlob} from './draggableBlob'
 
 class Sandbox extends React.Component {
   constructor(props) {
@@ -15,12 +19,6 @@ class Sandbox extends React.Component {
   render() {
     return (
       <div>
-        <br />
-        <b>CSS Only Liquid Dripping Effect</b>
-        <br />
-        Can be used as a background and multiple layers of liquid can be
-        created.
-        <br />
         <div className="container">
           <div className="blobs">
             <div className="liquid" />
@@ -33,9 +31,7 @@ class Sandbox extends React.Component {
             <div className="blob" />
             <div className="blob" />
           </div>
-          <h1 className="text">
-            LIQUID<br />DRIP
-          </h1>
+          <h1 className="text">welcome</h1>
         </div>
         <div className="" />
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
@@ -70,6 +66,14 @@ class Sandbox extends React.Component {
             </filter>
           </defs>
         </svg>
+
+        <GooeyMenu />
+
+        <ReactMultiCarousel />
+
+        <LiquidBubbles />
+
+        <DraggableBlob />
       </div>
     )
   }

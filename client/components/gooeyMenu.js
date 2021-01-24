@@ -16,26 +16,6 @@ class GooeyMenu extends React.Component {
     return (
       <div>
         <div>
-          HTML SCSSResult Skip Results Iframe EDIT ON
-          <h1>Gooey Menu</h1>
-          <h2>Using CSS and SVG Filters</h2>
-          <h3>
-            By <a href="https://codepen.io/lbebber">Lucas Bebber</a>
-          </h3>
-          <h4>
-            Version 1 -{' '}
-            <a href="https://codepen.io/lbebber/pen/RNgBPP" target="_blank">
-              Version 2
-            </a>{' '}
-            -{' '}
-            <a href="https://codepen.io/lbebber/pen/pvwZJp" target="_blank">
-              Version 3
-            </a>{' '}
-            -{' '}
-            <a href="https://codepen.io/lbebber/pen/rawQKR" target="_blank">
-              Version 4
-            </a>
-          </h4>
           <link
             rel="stylesheet"
             href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
@@ -117,7 +97,6 @@ class GooeyMenu extends React.Component {
               </filter>
             </defs>
           </svg>
-          Resources1× 0.5× 0.25×Rerun
         </div>
       </div>
     )

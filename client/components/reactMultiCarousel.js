@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
 import Carousel from 'react-multi-carousel'
+import {default as BlobStudy} from './blobStudy'
 import './reactMultiCarousel.css'
 const responsive = {
   superLargeDesktop: {
@@ -67,7 +68,7 @@ class ReactMultiCarousel extends React.Component {
             }}
           >
             {' '}
-            Item 1
+            <BlobStudy />
           </div>
 
           <div
@@ -79,7 +80,7 @@ class ReactMultiCarousel extends React.Component {
             }}
           >
             {' '}
-            Item 2
+            <BlobStudy />
           </div>
 
           <div
@@ -91,7 +92,7 @@ class ReactMultiCarousel extends React.Component {
             }}
           >
             {' '}
-            Item 3
+            <BlobStudy />
           </div>
 
           <div
@@ -103,7 +104,7 @@ class ReactMultiCarousel extends React.Component {
             }}
           >
             {' '}
-            Item 4
+            <BlobStudy />
           </div>
         </Carousel>
       </div>

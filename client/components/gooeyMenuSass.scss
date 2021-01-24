@@ -73,6 +73,8 @@ body {
   background: $bg;
   color: white;
   text-align: center;
+
+  z-index: 3 !important;
 }
 a {
   color: inherit;
