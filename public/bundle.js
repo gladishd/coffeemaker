@@ -445,8 +445,8 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       /**
-      * https://lab.hakim.se/blob/03/
-      */
+       * https://lab.hakim.se/blob/03/
+       */
       function BlobWorld() {
         var SCREEN_WIDTH = window.innerWidth;
         var SCREEN_HEIGHT = window.innerHeight;
@@ -461,21 +461,21 @@ function (_React$Component) {
         var mouseIsDown = false;
         var mouseDownOffset = {
           x: 0,
-          y: 0
-        }; // The bounds of the world
+          y: 0 // The bounds of the world
 
+        };
         var worldRect = {
           x: 0,
           y: 0,
           width: 0,
-          height: 0
-        }; // The world gravity, applied to all blobs
+          height: 0 // The world gravity, applied to all blobs
 
+        };
         var gravity = {
           x: 0,
-          y: 1.2
-        }; // A pair of blobs that should be merged
+          y: 1.2 // A pair of blobs that should be merged
 
+        };
         var mergeQueue = {
           blobA: -1,
           blobB: -1
@@ -571,8 +571,8 @@ function (_React$Component) {
 
         function documentMouseMoveHandler(event) {
           // This is where the mouse moving is actually found.
-          mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) * .5;
-          mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+          mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) * 0.5;
+          mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) * 0.5;
         }
 
         function documentMouseDownHandler(event) {
@@ -603,8 +603,8 @@ function (_React$Component) {
           if (event.touches.length == 1) {
             event.preventDefault();
             mouseIsDown = true;
-            mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
-            mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+            mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * 0.5;
+            mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * 0.5;
             dragBlob = blobs[findClosestBody(blobs, {
               x: mouseX,
               y: mouseY
@@ -621,8 +621,8 @@ function (_React$Component) {
         function documentTouchMoveHandler(event) {
           if (event.touches.length == 1) {
             event.preventDefault();
-            mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
-            mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+            mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * 0.5;
+            mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * 0.5;
           }
         }
 
@@ -801,8 +801,9 @@ function (_React$Component) {
             blob.velocity.y += (window.screenY - screenY) * (0.04 + Math.random() * 0.1);
             var friction = {
               x: 1.035,
-              y: 1.035
-            }; // Enforce horizontal world bounds
+              y: 1.035 // Enforce horizontal world bounds
+
+            };
 
             if (blob.position.x > worldRect.x + worldRect.width) {
               blob.velocity.x -= (blob.position.x - worldRect.width) * 0.05;
@@ -856,8 +857,9 @@ function (_React$Component) {
 
               position = {
                 x: blob.position.x,
-                y: blob.position.y
-              }; // Apply the joints
+                y: blob.position.y // Apply the joints
+
+              };
 
               for (j = 0; j < node.joints.length; j++) {
                 joint = node.joints[j]; // Determine the strain on the joints
@@ -911,7 +913,7 @@ function (_React$Component) {
               if (skin.debug) {
                 context.beginPath();
                 context.lineWidth = 1;
-                context.strokeStyle = "#ababab";
+                context.strokeStyle = '#ababab';
 
                 for (j = 0; j < cn.joints.length; j++) {
                   joint = cn.joints[j];
@@ -921,7 +923,7 @@ function (_React$Component) {
 
                 context.stroke();
                 context.beginPath();
-                context.fillStyle = i == 0 ? "#00ff00" : "#dddddd";
+                context.fillStyle = i == 0 ? '#00ff00' : '#dddddd';
                 context.arc(cn.position.x, cn.position.y, 5, 0, Math.PI * 2, true);
                 context.fill();
               } else {
@@ -943,8 +945,6 @@ function (_React$Component) {
           screenY = window.screenY;
         }
       }
-
-      ;
 
       function Blob() {
         this.position = {
@@ -1158,19 +1158,19 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Double click to split. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Double click to split.", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "keyboardUp",
         href: "#"
-      }, "Increase"), " / ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Increase"), ' ', "/", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "keyboardDown",
         href: "#"
-      }, "decrease"), " size or ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "decrease"), ' ', "size or", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "keyboardLeft",
         href: "#"
-      }, "Previous"), " / ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Previous"), ' ', "/", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "keyboardRight",
         href: "#"
-      }, "Next"), " skin."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("canvas", {
+      }, "Next"), ' ', "skin."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("canvas", {
         id: "world"
       }));
     }
@@ -1985,7 +1985,7 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "yo'ure done", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_multi_carousel__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_multi_carousel__WEBPACK_IMPORTED_MODULE_5___default.a, {
         responsive: responsive,
         arrows: true,
         slidesToSlide: this.state.numToScroll,
