@@ -10,7 +10,8 @@ import {
   GooeyMenu,
   BlobStudy,
   LiquidBubbles,
-  ReactMultiCarousel
+  ReactMultiCarousel,
+  DraggableBlob
 } from './components'
 import {me} from './store'
 
@@ -35,6 +36,7 @@ class Routes extends Component {
         <Route path="/blobstudy" component={BlobStudy} />
         <Route path="/liquidbubbles" component={LiquidBubbles} />
         <Route path="/reactmulticarousel" component={ReactMultiCarousel} />
+        <Route path="/draggableblob" component={DraggableBlob} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}

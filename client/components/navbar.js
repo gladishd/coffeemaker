@@ -26,6 +26,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           <Link to="/blobstudy">Blob Study</Link>
           <Link to="/liquidbubbles">Liquid Bubbles</Link>
           <Link to="/reactmulticarousel">React Multi Carousel</Link>
+          <Link to="/draggableblob">Draggable Blob</Link>
         </div>
       )}
     </nav>
