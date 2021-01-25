@@ -24,11 +24,9 @@ class Sandbox extends React.Component {
 
   fillHandler(e) {
     // e.preventDefault();
-    console.log('something')
     this.setState({
       fillBoolean: !this.state.fillBoolean
     })
-    console.log(this.state.fillBoolean)
   }
 
   clickHandlerMenu(e) {
@@ -40,8 +38,6 @@ class Sandbox extends React.Component {
     // level += 10
 
     let newColor
-
-    console.log('the selected menu option is ', e.target.id)
     if (e.target.id == 'water') {
       newColor = '#d4f1f9'
     } else if (e.target.id == 'tea') {
@@ -54,7 +50,6 @@ class Sandbox extends React.Component {
       level: level,
       newColor: newColor
     })
-    console.log('the new level is ', this.state.level)
   }
 
   render() {
@@ -74,6 +69,7 @@ class Sandbox extends React.Component {
             <div className="blob" />
           </div>
           <h1 className="text">welcome</h1>
+          <h1 className="littletext" />
         </div>
         <div className="" />
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">

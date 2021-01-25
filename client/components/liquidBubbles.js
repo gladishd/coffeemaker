@@ -14,7 +14,6 @@ class LiquidBubbles extends React.Component {
   }
   componentDidMount() {
     let fillBoolean = this.props.fillBoolean
-    console.log('did it at least remount in the beginning?')
 
     //essential variables
     var canvas = document.getElementById('canvasBubbles'),
@@ -112,10 +111,8 @@ class LiquidBubbles extends React.Component {
     // after the functions:
     // document.getElementById('level').oninput = function () {
     // level = document.getElementById('level').value
-    console.log('did it remount to the level point')
 
     level = this.props.level
-    console.log('the props are', this.props)
 
     var interval = setInterval(increment, 100)
 

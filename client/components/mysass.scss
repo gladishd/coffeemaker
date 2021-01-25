@@ -65,11 +65,21 @@ b {
 .text {
   position: absolute;
   left: 50%;
-  top: 45%;
+  top: 40%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #6cd2ff;
   font-size: 64px;
+  font-weight: 900;
+}
+.littletext {
+  position: absolute;
+  left: 5%;
+  top: 4%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #6cd2ff;
+  font-size: 16px;
   font-weight: 900;
 }
 .liquid {

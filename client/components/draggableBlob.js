@@ -45,7 +45,7 @@ class DraggableBlob extends React.Component {
       var skins = [
         {
           fillStyle: 'rgba(250,250,250,1.0)',
-          strokeStyle: 'rgba(255,255,255,1.0)',
+          strokeStyle: 'rgba(0,0,0,1.0)',
           lineWidth: 6,
           debug: false
         },
