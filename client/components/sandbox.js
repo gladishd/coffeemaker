@@ -14,11 +14,22 @@ class Sandbox extends React.Component {
     super(props)
     this.state = {
       selectedMenuOption: '',
-      level: -10
+      level: -10,
+      fillBoolean: false
     }
     this.clickHandlerMenu = this.clickHandlerMenu.bind(this)
+    this.fillHandler = this.fillHandler.bind(this)
   }
   componentDidMount() {}
+
+  fillHandler(e) {
+    // e.preventDefault();
+    console.log('something')
+    this.setState({
+      fillBoolean: !this.state.fillBoolean
+    })
+    console.log(this.state.fillBoolean)
+  }
 
   clickHandlerMenu(e) {
     e.preventDefault()
@@ -26,7 +37,7 @@ class Sandbox extends React.Component {
       selectedMenuOption: e.target.id
     })
     let level = this.state.level
-    level += 10
+    // level += 10
 
     let newColor
 
@@ -49,6 +60,7 @@ class Sandbox extends React.Component {
   render() {
     return (
       <div>
+        <DraggableBlob />
         <div className="container">
           <div className="blobs">
             <div className="liquid" />
@@ -102,15 +114,15 @@ class Sandbox extends React.Component {
         <ReactMultiCarousel
           selectedType={this.state.selectedMenuOption}
           newColor={this.state.newColor}
+          fillHandler={this.fillHandler}
         />
 
         <LiquidBubbles
           level={this.state.level}
-          key={this.state.level}
+          key={this.state.fillBoolean}
           newColor={this.state.newColor}
+          fillBoolean={this.state.fillBoolean}
         />
-
-        {/* <DraggableBlob /> */}
       </div>
     )
   }

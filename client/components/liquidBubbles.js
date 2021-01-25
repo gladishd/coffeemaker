@@ -13,10 +13,11 @@ class LiquidBubbles extends React.Component {
     }
   }
   componentDidMount() {
+    let fillBoolean = this.props.fillBoolean
     console.log('did it at least remount in the beginning?')
 
     //essential variables
-    var canvas = document.getElementById('canvas'),
+    var canvas = document.getElementById('canvasBubbles'),
       ctx = canvas.getContext('2d'),
       aniId
     //parameters
@@ -49,6 +50,7 @@ class LiquidBubbles extends React.Component {
       }
       aniId = window.requestAnimationFrame(draw)
     }
+
     //function that draws into the canvas in a loop
     function draw() {
       ctx.clearRect(0, 0, w, h)
@@ -73,23 +75,25 @@ class LiquidBubbles extends React.Component {
       ctx.fill()
 
       //draw the bubbles
-      for (var i = 0; i < 40; i++) {
-        ctx.beginPath()
-        // change the size of the bubbles
-        ctx.arc(
-          particles[i].x,
-          particles[i].y,
-          particles[i].d * 3,
-          0,
-          2 * Math.PI
-        )
-        if (fill) ctx.fill()
-        else
-          // ctx.fill()
-          ctx.stroke()
+      if (fillBoolean) {
+        for (var i = 0; i < 40; i++) {
+          ctx.beginPath()
+          // change the size of the bubbles
+          ctx.arc(
+            particles[i].x,
+            particles[i].y,
+            particles[i].d * 3,
+            0,
+            2 * Math.PI
+          )
+          if (fill) ctx.fill()
+          else
+            // ctx.fill()
+            ctx.stroke()
+        }
+        //debug
+        // ctx.fillText('c:' + c + ' lv:' + level, 10, 10)
       }
-      //debug
-      // ctx.fillText('c:' + c + ' lv:' + level, 10, 10)
 
       update()
       aniId = window.requestAnimationFrame(draw)
@@ -105,10 +109,22 @@ class LiquidBubbles extends React.Component {
         if (particles[i].d <= 0) particles[i].respawn()
       }
     }
+    // after the functions:
     // document.getElementById('level').oninput = function () {
     // level = document.getElementById('level').value
-    console.log('did it remount')
+    console.log('did it remount to the level point')
+
     level = this.props.level
+    console.log('the props are', this.props)
+
+    var interval = setInterval(increment, 100)
+
+    function increment() {
+      if (level <= 100 && fillBoolean) {
+        level += 1
+      }
+    }
+
     // level =
 
     // console.log("the new level is", level)
@@ -138,25 +154,11 @@ class LiquidBubbles extends React.Component {
     init()
   }
 
-  componentDidUpdate() {
-    // this.setState({ level: this.props.level })
-    // level = document.getElementById('level').value
-
-    // this.setState({
-    //   level: this.props.level
-    // })
-
-    // console.log("did it update", level)
-    // level = document.getElementById('level').value
-    console.log('did it update')
-    // level = this.props.level
-  }
-
   render() {
     return (
       <div>
         <div>
-          <canvas id="canvas" />
+          <canvas id="canvasBubbles" />
         </div>
         <div id="container">
           {/* <input type="range" id="level" value="50" min="1" max="100" /> */}

@@ -25,7 +25,7 @@ class GooeyMenu extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="gooeyMenuClassForStyle">
         <div>
           <link
             rel="stylesheet"

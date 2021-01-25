@@ -98,19 +98,6 @@ class DraggableBlob extends React.Component {
         document.addEventListener('keydown', documentKeyDownHandler, false)
         window.addEventListener('resize', windowResizeHandler, false)
 
-        document
-          .getElementById('keyboardUp')
-          .addEventListener('click', keyboardUpHandler, false)
-        document
-          .getElementById('keyboardDown')
-          .addEventListener('click', keyboardDownHandler, false)
-        document
-          .getElementById('keyboardLeft')
-          .addEventListener('click', keyboardLeftHandler, false)
-        document
-          .getElementById('keyboardRight')
-          .addEventListener('click', keyboardRightHandler, false)
-
         createBlob({x: SCREEN_WIDTH * 0.5, y: SCREEN_HEIGHT * 0.1})
 
         windowResizeHandler()
@@ -813,25 +800,6 @@ class DraggableBlob extends React.Component {
   render() {
     return (
       <div>
-        <p>
-          Double click to split.{' '}
-          <a id="keyboardUp" href="#">
-            Increase
-          </a>{' '}
-          /{' '}
-          <a id="keyboardDown" href="#">
-            decrease
-          </a>{' '}
-          size or{' '}
-          <a id="keyboardLeft" href="#">
-            Previous
-          </a>{' '}
-          /{' '}
-          <a id="keyboardRight" href="#">
-            Next
-          </a>{' '}
-          skin.
-        </p>
         <canvas id="world" />
       </div>
     )

@@ -31,7 +31,7 @@ class ReactMultiCarousel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isMoving: null
+      isMoving: false
     }
   }
   componentDidMount() {}
@@ -64,7 +64,7 @@ class ReactMultiCarousel extends React.Component {
             className="helloThere"
             onClick={e => {
               if (this.state.isMoving) {
-                e.preventDefault()
+                // e.preventDefault()
               }
             }}
           >
@@ -79,7 +79,7 @@ class ReactMultiCarousel extends React.Component {
             className="helloThere"
             onClick={e => {
               if (this.state.isMoving) {
-                e.preventDefault()
+                // e.preventDefault()
               }
             }}
           >
@@ -94,7 +94,23 @@ class ReactMultiCarousel extends React.Component {
             className="helloThere"
             onClick={e => {
               if (this.state.isMoving) {
-                e.preventDefault()
+                // e.preventDefault()
+              }
+              this.props.fillHandler()
+            }}
+          >
+            {' '}
+            <BlobStudy
+              selectedType={this.props.selectedType}
+              newColor={this.props.newColor}
+            />
+          </div>
+
+          <div
+            className="helloThere"
+            onClick={e => {
+              if (this.state.isMoving) {
+                // e.preventDefault()
               }
             }}
           >
@@ -109,12 +125,30 @@ class ReactMultiCarousel extends React.Component {
             className="helloThere"
             onClick={e => {
               if (this.state.isMoving) {
-                e.preventDefault()
+                // e.preventDefault()
               }
             }}
           >
             {' '}
-            <BlobStudy />
+            <BlobStudy
+              selectedType={this.props.selectedType}
+              newColor={this.props.newColor}
+            />
+          </div>
+
+          <div
+            className="helloThere"
+            onClick={e => {
+              if (this.state.isMoving) {
+                // e.preventDefault()
+              }
+            }}
+          >
+            {' '}
+            <BlobStudy
+              selectedType={this.props.selectedType}
+              newColor={this.props.newColor}
+            />
           </div>
         </Carousel>
       </div>

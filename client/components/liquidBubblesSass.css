@@ -1,12 +1,12 @@
 body {
   margin: 0;
 }
-canvas {
+#canvasBubbles {
   position: relative;
   top: 0;
-  left: 0;
+  left: -11vw;
   background: white;
-  width: 20vw;
+  width: 10vw;
 }
 #container {
   /* overflow: hidden; */

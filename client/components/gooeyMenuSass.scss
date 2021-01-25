@@ -60,21 +60,21 @@
   @return sin((pi() / 2) - $angle);
 }
 //vars
-$fg: #ff4081;
-$bg: #3f51b5;
+$fg: #ffc340;
+$bg: #b53f62;
 $pi: 3.14;
 
 //config
 $menu-items: 3;
-$open-distance: 115px;
-$opening-angle: $pi - 0.2;
+$open-distance: 85px;
+$opening-angle: $pi - 1;
 
 body {
   background: $bg;
   color: white;
   text-align: center;
 
-  z-index: 3 !important;
+  z-index: 30 !important;
 }
 a {
   color: inherit;
@@ -130,15 +130,17 @@ h1 {
   transition: transform 200ms;
 }
 $hamburger-spacing: 8px;
+// each line on the hamburger icon
 .hamburger-1 {
-  transform: translate3d(0, -$hamburger-spacing, 0);
+  transform: translate3d(0, 0, 0) rotate(120deg);
 }
 .hamburger-2 {
   transform: translate3d(0, 0, 0);
 }
 .hamburger-3 {
-  transform: translate3d(0, $hamburger-spacing, 0);
+  transform: translate3d(0, 0, 0) rotate(60deg);
 }
+// menu icon
 .menu-open:checked + .menu-open-button {
   .hamburger-1 {
     transform: translate3d(0, 0, 0) rotate(45deg);
@@ -157,7 +159,7 @@ $hamburger-spacing: 8px;
   position: absolute;
   left: 50%;
   margin-left: -$width/2;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: $width/2;
   width: $width;
   height: $height;
@@ -173,14 +175,14 @@ $hamburger-spacing: 8px;
   }
   @for $i from 1 through $menu-items {
     &:nth-child(#{$i + 2}) {
-      transition-duration: 10ms+ (60ms * ($i));
+      transition-duration: 100ms+ (60ms * ($i));
     }
   }
 }
 
 .menu-open-button {
   @extend %ball;
-  z-index: 2;
+  z-index: 30 !important;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-duration: 400ms;
   transform: scale(1.1, 1.1) translate3d(0, 0, 0);
@@ -191,7 +193,7 @@ $hamburger-spacing: 8px;
 }
 .menu-open:checked + .menu-open-button {
   transition-timing-function: linear;
-  transition-duration: 200ms;
+  transition-duration: 1200ms;
   transform: scale(0.8, 0.8) translate3d(0, 0, 0);
 }
 
@@ -210,4 +212,9 @@ $hamburger-spacing: 8px;
       );
     }
   }
+}
+
+.gooeyMenuClassForStyle {
+  padding-bottom: 5em;
+  z-index: 30 !important;
 }
