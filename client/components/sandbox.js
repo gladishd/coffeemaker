@@ -43,11 +43,11 @@ class Sandbox extends React.Component {
 
     console.log('the selected menu option is ', e.target.id)
     if (e.target.id == 'water') {
-      newColor = 'blue'
+      newColor = '#d4f1f9'
     } else if (e.target.id == 'tea') {
-      newColor = 'yellow'
+      newColor = '#d0f0c0'
     } else if (e.target.id == 'coffee') {
-      newColor = 'brown'
+      newColor = '#6f4e37'
     }
 
     this.setState({

@@ -29,14 +29,8 @@ class Routes extends Component {
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/sandbox" component={Sandbox} />
-        <Route path="/gooeymenu" component={GooeyMenu} />
-        <Route path="/blobstudy" component={BlobStudy} />
-        <Route path="/liquidbubbles" component={LiquidBubbles} />
-        <Route path="/reactmulticarousel" component={ReactMultiCarousel} />
-        <Route path="/draggableblob" component={DraggableBlob} />
+        <Route path="/" component={Sandbox} />
+
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
