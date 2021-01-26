@@ -82,10 +82,10 @@ CSS here instead of declaring it explicitly in the code. */
   -moz-transition-delay: 0;
   -o-transform: rotate(0deg) rotateY(0);
   -o-transition-delay: 0;
-  -webkit-box-shadow: #00ffff 0 0 1px, #5f0455 0 -1px 2px, #5f0455 0 -1px 5px,
-    #5f0455 0 -1px 10px, 2px 1px 7px 2px rgba(0, 0, 0, 0);
-  box-shadow: #00ffff 0 0 1px, #5f0455 0 -1px 2px, #5f0455 0 -1px 5px,
-    #5f0455 0 -1px 10px, 2px 1px 7px 2px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: #00ffff 0 0 1px, #ff00ff 0 -1px 2px, #ffae00 0 -1px 5px,
+    #ffe600 0 -1px 10px, 2px 1px 7px 2px rgba(0, 0, 0, 0);
+  box-shadow: #00ffff 0 0 1px, #ff0095 0 -1px 2px, #ff008c 0 -1px 5px,
+    #fffb00 0 -1px 10px, 2px 1px 7px 2px rgba(0, 0, 0, 0);
 }
 .react-carousel-item:hover {
   background-position: 0 -100%;
@@ -247,5 +247,11 @@ CSS here instead of declaring it explicitly in the code. */
   }
   .react-multi-carousel-track {
     overflow: visible !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .react-multi-carousel-list {
+    width: 100vw;
   }
 }

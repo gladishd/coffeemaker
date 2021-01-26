@@ -116,3 +116,10 @@ body {
   background-color: tomato;
   color: #ffffff;
 }
+@media (max-width: 700px) {
+  #canvasBubbles {
+    background: white;
+    width: 45vw;
+    height: 15vh;
+  }
+}
